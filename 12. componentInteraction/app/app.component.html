@@ -1,0 +1,24 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}
+  </h1>
+</div>
+
+<div>
+  <label>From Child Component</label>
+  <h3>This is {{message}}</h3>
+</div>
+<!-- //Child Component// -->
+<!-- Bind the property to the starting of the selector of sample component.
+Bind the property which we declared in the class using propertybinding concept
+public appComponentValue="From App Component". -->
+  
+<!-- //Bind to the custom event and capture the child event then assign to the $event variable -->
+<app-sample [parentData]="appComponentValue" (childComponentValue)="message=$event"></app-sample>
+
+<!-- <app-sample [parentData]="appComponentValue"></app-sample> -->
+
+
+
+

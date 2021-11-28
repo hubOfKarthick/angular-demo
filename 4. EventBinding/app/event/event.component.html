@@ -1,0 +1,28 @@
+<p>The following bindings that we have discussed so far is in one direction i.e from a component class property to an HTML element property.</p>
+<li>Interpolation</li>
+<li>Property Binding</li>
+<li>Attribute Binding</li>
+<li>Class Binding</li>
+<li>Style Binding</li>
+<p>Above bindings will flow the Data from component to html</p>
+<p>Evnent binding: used to transfer data/event flow from html to component </p>
+<p>How about flowing data in the opposite direction i.e from an HTML element to a component</p>
+
+<p>When a user performs any action like clicking on a button, hovering over an element, selecting from a dropdownlist, typing in a textbox etc, then the corresponding event for that action is raised. </p>
+<p>We need to know when user performs these actions. We can use angular event binding to get notified when these events occur</p>
+
+<p><strong>With event binding we can also use the on- prefix alternative</strong></p>
+
+<p>
+  {{status}}
+</p>
+
+<button on-click="loginOnClick($event)"> Login</button>
+
+<button (click)="loginOnClick($event)"> Login</button>
+<button (click)="message='you clicked the button '"> ClickMe</button>
+
+<p>
+  Event Type is {{eventType}}
+</p>
+<p>Message :{{message}}</p>

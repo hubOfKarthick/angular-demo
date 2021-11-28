@@ -1,0 +1,52 @@
+<form [formGroup]="userForm" (ngSubmit)="submitForm()">
+	<table>
+		<tr>
+			<td><label>Name:</label></td>
+			<td><input formControlName="name" type="text" name="name" /></td>
+		</tr>
+
+		<tr>
+			<td><label>Email:</label></td>
+			<td><input formControlName="email" type="text" name="email" /></td>
+		</tr>
+
+		<tr>
+			<td><label>Sex:</label></td>
+			<td><input type="radio" formControlName="gender" name="gender" value="Male" /><span>Male</span>
+				<input type="radio" formControlName="gender" name="gender" value="Female" /><span>Female</span></td>
+		</tr>
+
+		<tr formArrayName="languages">
+			<td><label>Language:</label></td>
+			<td formGroupName="0"><input type="checkbox" formControlName="english" />English</td>
+			<td formGroupName="1"><input type="checkbox" formControlName="tamil" />Tamil</td>
+
+		</tr>
+	
+		<tr>
+			<td><label>Country:</label></td>
+			<td><select formControlName="country" name="country">
+					<option selected="" value="Default">(Please select a country)</option>
+					<option value="IND">India</option>
+					<option value="USA">America</option>
+					<option value="UK">London</option>
+					<option value="SA">South Africa</option>
+				</select></td>
+		</tr>
+
+
+	
+
+	
+		<tr>
+			<td></td>
+			<td><input type="submit" value="Submit" class="btn btn-primary" [disabled]="!userForm.valid"></td>
+		</tr>
+
+
+		<pre><code>{{userForm.value | json}}</code></pre>
+		<pre><code>{{userForm.valid | json}}</code></pre>
+
+
+	</table>
+</form>

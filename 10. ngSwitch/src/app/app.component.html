@@ -1,0 +1,39 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+  {{ title }}
+  </h1>
+</div>
+
+ <div [ngSwitch]="color">
+  <div *ngSwitchCase="'Red'">Red Color is Choosen</div>
+  <div *ngSwitchCase="'orange'">Orange Color is Choosen</div>
+  <div *ngSwitchCase="'blue'">Blue Color is Choosen</div>
+  <div *ngSwitchDefault>Default color is choosen</div>
+</div>
+<br/>  
+ <h4>NgSwitch</h4>
+<ul *ngFor="let person of people"  [ngSwitch]="person.country"> 
+
+  <li *ngSwitchCase="'UK'" 
+      class="text-success">{{ person.name }} ({{ person.country }})
+  </li>
+  <li *ngSwitchCase="'USA'"
+      class="text-primary">{{ person.name }} ({{ person.country }})
+  </li>
+  <li *ngSwitchCase="'China'"
+      class="text-danger">{{ person.name }} ({{ person.country }})
+  </li>
+  <li *ngSwitchDefault 
+      class="text-warning">{{ person.name }} ({{ person.country }})
+  </li>
+</ul> 
+
+<div>ngFor with ngIf sample</div>
+<ul *ngFor="let person of people">
+<li *ngIf="person.age < 25">
+
+Name is ::{{person.name}} ({{person.age}})
+</li>
+</ul>
+

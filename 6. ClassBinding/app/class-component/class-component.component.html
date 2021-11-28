@@ -1,0 +1,18 @@
+
+<p class="text-Success">
+  Class Binding Normal way
+</p>
+
+<h2 [class]="statusSuccess"> ClassBinding using property 'statusSuccess'</h2>
+<li>Class can be changed by changing the property in the class</li>
+<li>A regular class attribute will become as dummy attribute in the presence of class binding.</li>
+<li>We should not use one at time, not both.</li>
+
+<h2 class="text-fontChange">Regular class binding to italic</h2>
+<h2 class="text-fontChange" [class]="statusSuccess">Both class bindng and regular class concept</h2>
+
+<p>Conditionally appling a single Class sample</p>
+<h3 [class.text-Error]="textError">Welcome to Chennai</h3>
+
+<p>ngclass is used to apply multiple class Conditionally</p>
+<h3 [ngClass]="multiClass">Multiple class Sample using ngClass built in attribute of Angular</h3>

@@ -1,0 +1,90 @@
+<form [formGroup] = "userForm" (ngSubmit)="submitForm()">
+	<table>
+		<tr>
+			<td><label >Name:</label></td>
+			<td><input formControlName="name" type="text" name="name"  /></td>
+		</tr>
+
+		<tr>
+			<td><label>Email:</label></td>
+			<td><input formControlName="email" type="text" name="email"  /></td>
+		</tr>
+
+		<tr>
+			<td><label >Sex:</label></td>
+			<td><input type="radio" formControlName="gender" name="gender" value="Male" /><span>Male</span>
+				<input type="radio" formControlName="gender" name="gender" value="Female" /><span>Female</span></td>
+		</tr>
+
+		<tr formArrayName="languages">
+			<td><label>Language:</label></td>
+			<td formGroupName="0"><input type="checkbox" formControlName="english" />English</td>
+			<td formGroupName="1"><input type="checkbox" formControlName="tamil"  />Tamil</td>
+			
+		</tr>
+		<tr>
+			<td></td>
+			<td><input type="submit" (click)="addAddress()" name="submit" value="Add"/></td>
+		</tr>
+<div formArrayName="addresses" *ngFor="let address of userForm.get('addresses').controls; let i = index;">
+	<fa-icon (click)="removeAddress(i)" icon="times-circle" class="position-relative" style="left: 547px;top:-21px;"></fa-icon> 
+	<div  [formGroupName]="i" >	
+	<tr>
+			<td><label >Address Line 1:</label></td>
+			<td><input type="text" formControlName="line1" name="line1"  /></td>
+		</tr>
+		
+		<tr>
+			<td><label >Address Line 2:</label></td>
+			<td><input type="text" formControlName="line2" name="line2" /></td>
+		</tr>
+		
+		<tr>
+			<td><label >Country:</label></td>
+			<td><select formControlName="country" name="country" >
+				<option selected="" value="Default">(Please select a country)</option>
+				<option value="IND">India</option>
+				<option value="USA">America</option>
+				<option value="UK">London</option>
+				<option value="SA">South Africa</option>
+				</select></td>
+		</tr>
+
+		<tr>
+			<td><label >State :</label></td>
+			<td><select  formControlName="state" name="state" >
+				<option selected="" value="Default">(Please select a state)</option>
+				<option value="TN" >Tamil Nadu</option>
+				<option value="KL">Kerala</option>
+				<option value="AP">Andhra</option>
+				<option value="KA">Karnadaka</option>
+				</select></td>
+		</tr>
+
+		<tr>
+			<td><label >City:</label></td>
+			<td><select name="city" formControlName="city">
+				<option selected="" value="Default">(Please select a city)</option>
+				<option value="MDU">Madurai</option>
+				<option value="DGL">Dindigul</option>
+				<option value="CH">Chennai</option>
+				<option value="SLM">Salem</option>
+				</select></td>
+		</tr>
+
+
+	</div>
+	
+	</div>
+	<tr>
+		<td></td>
+		<td><input type="submit" value="Submit" class="btn btn-primary" [disabled]="!userForm.valid"></td>
+	</tr>
+	
+
+<pre><code>{{userForm.value | json}}</code></pre>
+<pre><code>{{userForm.valid | json}}</code></pre>
+
+
+	</table>
+</form>

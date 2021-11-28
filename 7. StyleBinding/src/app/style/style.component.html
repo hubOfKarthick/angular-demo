@@ -1,0 +1,15 @@
+<li>Setting inline styles with style binding is very similar to setting CSS classes with class binding</li>
+<li>style property name can be written in either dash-case or camelCase</li>
+<li>For example, font-weight style can also be written using camel case - fontWeight. </li>
+<li>Some styles like font-size have a unit extension</li>
+<li>Notice the color style is added using the style attrib</li>
+<li style="margin-top: 50px"> Inline :margin Top Example</li>
+
+
+<p [style.color]="'orange'">Style Binding </p>
+<p [style.color]="hasError ? 'red':'green'">Style Binding using ternary condition </p>
+<h3 [style.font-weight] ="isBold ? 'bold':'normal'">Style binding Bold with dash-case</h3>
+<h3 [style.fontWeight] ="isBold ?'bold':'normal'">style binding with camel case</h3>
+<h3 [ngStyle] ="textStyle">StyleBinding using ngStyle attribute</h3>
+<h3 [style.color]="color">Highlight color</h3>
+<h3 [style.font-size.px]="fontSize">Font Size changing</h3>

@@ -1,0 +1,38 @@
+
+<div class="container">
+  <div class="row">
+      <div class="form_bg">
+            <!-- Attaching a local template reference variable to the form element
+            Now we can use the variable regForm in our template and it will point to our instance of the ngForm directive
+            -->
+          <form #regForm='ngForm' (ngSubmit)="userRegistraion(regForm)" >
+               <h2 class="text-center">User Registration</h2>
+              <br/>
+              <div class="form-group">
+                  <label>First Name</label>
+                  <input type="text" class="form-control" placeholder="Enter First Name" name="firstname" ngModel > 
+              </div>
+              <div class="form-group">
+                    <label>Last Name</label>
+                  <input type="text" class="form-control"  placeholder="Enter Last Name" name="lastname" ngModel >
+              </div>
+              <div class="form-group">
+                    <label>Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter Email Id" name="email" ngModel>
+                  
+              </div>
+              <div class="form-group">
+                    <label>Mobile Number</label>
+                <input type="text" class="form-control" id="mblNo" placeholder="Enter Mobile Number" name="mblNo" ngModel>
+                
+            </div>
+               <div class="form-group">
+              </div>
+              <br/>
+              <div class="align-center">
+                  <button type="submit" class="btn btn-default">Click To Register</button>
+              </div>
+          </form>
+      </div>
+  </div>
+</div>

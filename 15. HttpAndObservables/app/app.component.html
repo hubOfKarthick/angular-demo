@@ -1,0 +1,35 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+     {{ title }}
+  </h1>
+</div>
+<li>The first step is to import HttpClientModule from - @angular/common/http.</li> 
+<li> After the HttpClientModule is imported, include it in the imports array of the NgModule() decorator of our root module "AppModule" which is in "app.module.ts" file.</li>
+<li>Use the StudentService class constructor to inject Angular Http service. The injected http service can then be used anywhere in this class to call a web service over http.</li>
+<li>http get() method will return Observable[Response].</li>
+<h3>Observables</h3>
+<li>Observable is an asynchronous pattern. In the Observable pattern we have an Observable and an Observer. Observer observes the Observable. In many implementations an Observer is also called as a Subscriber.</li>
+<li>An Observable can have many Observers (also called Subscribers).
+  </li>
+<li>Observable emits items or notifications over time to which an Observer (also called Subscriber) can subscribe.</li>
+<li>“observer” (an object with “next”, “error” and “complete” methods on it).</li>
+<li>When a subscriber subscribes to an Observable, the subscriber also specifies a callback function.)</li>
+<li>This subscriber callback function is notified as and when the Observable emits items or notifications.</li>
+<li>Within this callback function we write code to handle data itmes or notifications received from the Observable.</li>
+<li> If the result of an HTTP request to a server or some other expensive async operation isn't needed anymore, the Subscription of an Observable allows to cancel the subscription</li>
+<li>Observable provides operators like map, forEach, reduce, similar to an array</li>
+
+
+<h3>Steps going to be followed</h3>
+<li>Calling Http Get Request from the StudentService</li>
+<li>Receive the observable(response) and cast into an student array</li>
+<li>Subscribe the observable in the studentlist and student details services</li>
+<li>Assigne the student array (response) to the local variable to bind the data to UI</li>
+<h3>RxJs</h3>
+<li>Reactive Extension for javascript</li>
+<li>External library to work with the Observables</li>
+<li></li>
+<app-studen-list></app-studen-list>
+<app-studen-details></app-studen-details>
+

@@ -1,0 +1,40 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+     {{ title }}
+  </h1>
+
+</div>
+<h2>About Template Reference Variable: </h2>
+<ul>
+  <li>
+    <h4>
+      Flow data from view to class and To easly access the DOM elements and its properties
+  </h4>
+</li>
+  <li>
+    <h4>The hash symbol (#) is used to declare a template reference variable. eg: #VariableName</h4>
+  </li>
+  <li>
+    <h4>The ref- prefix  is an alternative to the hash symbol.</h4>
+  </li>
+  <li>
+    <h4>It creates a reference to the input element that can be used later. </h4>
+  </li>
+  <li>
+    <h4>Template reference variables will works with DOM elements, components and directives. </h4>
+  </li>
+  <li>
+    <h4>Template reference variables are hoisted and can be accessed anywhere in the template.  </h4>
+  </li>
+</ul>
+
+
+<div>
+  <label>Enter User Name :</label>
+  <!-- <input type="text" #userName><br/> -->
+  <!-- Ref-Variable Syntax sample-->
+   <input type="text" ref-userName><br/>
+  <button (click)="getInputData(userName.value)">GetData</button>
+</div>
+

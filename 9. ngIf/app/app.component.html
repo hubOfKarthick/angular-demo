@@ -1,0 +1,25 @@
+
+<!-- 
+<h3 *ngIf="true">My Name Is John</h3> -->
+<!-- <h3 *ngIf="false">My Name Is John </h3> -->
+
+<!-- <h3 *ngIf = "userName">My Nmae Is John peter</h3> -->
+
+
+ <!-- <div *ngIf = "userName; else elseBlock">
+  username will Enable
+ </div>
+<ng-template #elseBlock>
+  <h4>Else part of If condition is visible</h4>
+</ng-template>  -->
+
+
+<div *ngIf = "userName; then thenBlock; else elseBlock"></div>
+
+<ng-template #thenBlock>
+  <h4>If part for If Condition is true</h4>
+</ng-template>
+
+<ng-template #elseBlock>
+  <h4>Else part of If condition</h4>
+</ng-template>
