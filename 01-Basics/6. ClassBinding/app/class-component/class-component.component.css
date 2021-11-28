@@ -1,0 +1,14 @@
+.text-Success{
+    color:green
+}
+.text-Error{
+color:red;
+}
+.text-fontChange{
+    font-style:italic;
+}
+
+.classname{
+color:red !important;
+
+}

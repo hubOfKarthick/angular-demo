@@ -1,0 +1,25 @@
+<h1>
+  pipes
+</h1>
+<li>Transform data before display</li>
+<li>Built in pipes include lowercase, uppercase, decimal, date, percent, currency etc</li>
+<li>To apply a pipe on a bound property use the pipe character " | "</li>
+<li>Pass parameters to pipe using colon " : "</li>
+<li>Custom pipes can be created</li>
+
+<h2>{{name}}</h2>
+<h2>{{name | lowercase}}</h2>
+<h2>{{name | uppercase}}</h2>
+<h2>{{name | slice:4}}</h2>
+<h2>{{name | slice:3:6}}</h2>
+<h2>{{message | titlecase}}</h2>
+<h2>{{person | json}}</h2>
+<h2>{{3.14545 | number:'2.1-2'}}</h2>
+<h2>{{0.3 | percent}}</h2>
+<h2>{{0.3 | currency}}</h2>
+<h2>{{0.3 | currency:'INR'}}</h2>
+<h2>{{3 | currency:'INR':'code'}}</h2>
+<h2>{{date}}</h2>
+<h2>{{date | date:'short'}}</h2>
+<h2>{{date | date:'shortDate'}}</h2>
+<h2>{{date | date:'shortTime'}}</h2>

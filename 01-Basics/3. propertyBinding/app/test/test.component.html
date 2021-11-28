@@ -1,0 +1,38 @@
+<h1>Property Binding</h1>
+Bindng to the property of the DOM element
+<h4>Remember to enclose the property name with a pair of square brackets.</h4>
+<h4>We can also use the alternate syntax with bind- prefix. This is known as canonical form.</h4>
+<b>From security standpoint, Angular data binding sanitizes malicious content before displaying it on the browser.<br/> Both interpolation and property binding protects us from malicious content and render the content harmlessly.</b>
+
+<li>Both Interpolation and Property Binding flows value in one direction [From component data property to the html element property].</li>
+<li>Interpolation is a special syntax that angular converts in to propertybinding</li>
+<li>Interpolation is just an alternative way to property binding.</li>
+<li>In Some case if we want to concatenate the string means, we have to use Interpolation instead of property Binding.</li>
+
+<li>When setting an element property to a non-string data value, you must use property binding</li>
+
+<h2>Html attribute vs DOM Property</h2>
+<li>Attributes are defined by the html.</li>
+<li>Property are defined by the DOM.</li>
+<li>Attribute didnot change but the value prperty will change.</li>
+<li>Atribute and property are not the same.</li>
+<li>Attributes are defined by HTML.</li>
+<li>Property are defined by DOM (Document Object Model).</li>
+<li>Attributes initialize DOM property and they done. Attribute values cannot change once they initialized.
+  Property values are changed.</li>
+<li>we can use interpolation to bind property, But their is limitation with interpolation. It can only work with strings values.</li>
+
+<h2>Demo</h2>
+
+ <!-- <input type="text" id="" name="" value="Chennai">  -->
+
+<!-- <input type="text" [id]="sampleId" >
+<input type="text" id={{sampleId}}>  -->
+
+<!-- <input type="text" disabled="false" id={{sampleId}}> -->
+<!-- <input type="text" disabled={{status}} id={{sampleId}}> -->
+
+<!-- <input type="text" [disabled]="true"> -->
+<!-- <input type="text" [disabled] = "status" [id]="sampleId"> -->
+<!-- <input type="text" [disabled]="status"> -->
+<!-- <input type="text" bind-disabled ="status"> -->

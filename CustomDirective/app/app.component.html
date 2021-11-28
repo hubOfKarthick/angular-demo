@@ -1,0 +1,31 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1 >
+    {{ title }}
+  </h1>
+</div>
+<p>Directives are markers on a DOM element (such as an
+  attribute) that tell Angular to attach a specified behavior to an existing element.</p>
+<li>how to create a basic directive using the @Directive decorator</li>
+<li>how to use selectors to associate an element with a directive based on an attribute.</li>
+<li>how to interact with the raw DOM element of the associated element from the directive</li>
+<p>Angular team recommends using directives as attributes, prefixed with a
+  namespace</p>
+
+  <p>@Directive : create a directive by decorating a class with the @Directive decorator.</p>
+<h3>ElementRef</h3>
+<li>ElementRef gives the directive direct access to the DOM element upon which it’s attached</li>
+<li>ElementRef itself is a wrapper for the actual DOM element which we can access via the property
+  nativeElement.</li>
+
+  <h3>Renderer</h3>
+  <li>Used to set properties on our elements</li>
+  <li>we can interact with and change certain properties of that element</li>
+  <li>The Renderer object gives us many helper methods to enable us to
+    modify the DOM element.</li>
+
+<h2 appCustomDirective >Here are some links to help you start: </h2>
+
+<input myNumberOnly type="text">
+
+

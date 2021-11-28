@@ -1,0 +1,41 @@
+<p>*****Inside the InterpolationSample Component*******</p>
+
+<li> Expression that is enclosed in double curly braces is commonly called as Template Expresion</li>
+<li>Template expression can be also an Ternary Operator</li>  
+<p>Thing can be done  with Interpolation.</p>
+  <li>We can bind data from class to the template using the  double curley braces.</li>
+  <li>We can Evaluate the javascript expression.</li>
+  <li>We can use javascript properties and methods also.</li>
+  <li>We can perform the string Concatenation.</li>
+  <li>We can call the class methods in the interpolation directly inside the expression.</li>
+<li>We can concatenate a hard-coded string with the property value also</li>
+<li>We can also call class methods using interpolation.</li>  
+<p>Things can't do with Interpolation</p>
+<li>Assingments are not possible inside the expression  eg: a = 2+5 </li>
+<li>can't able Acessing Global Variables (windows/screens) bcoz template not aware of global javascript variables</li>
+
+  
+  <p style="margin-top: 20px">Welcome to {{name}}</p>
+
+<h2>5+5 is {{5+5}}</h2>
+<h2>5 + 5 + 5 is {{5+5+5}}</h2>
+<h2>5 + 5 + 5 - 10 is {{ 5+5+5 -10}}</h2>
+<h2>{{"Welcome to "+ name}}</h2>
+<h2>{{name .toUpperCase()}}</h2>
+<h2>{{name.toLowerCase()}}</h2>
+<h2>{{name.length}}</h2>
+<h2>{{"City = "+name}}</h2>
+
+<p>Ternary Operator Sample</p>
+<h2>{{myName ? myName : 'Name is null'}}</h2>
+ <!-- <h2>{{ a = 2+5}}</h2>  -->
+<!-- <h2>{{window.location.href}}</h2> -->
+
+<p>Window loaction URL</p>
+<h3>{{screenUrl}}</h3>
+
+<p>Binding Method</p>
+<h2>{{greetingsMethod()}}</h2>
+
+
+

@@ -1,0 +1,28 @@
+<div style="text-align:center">
+  <h1>
+    Welcome to {{title}}!!
+  </h1>
+  <nav>
+    <a routerLink="home" routerLinkActive ="active" >Home</a>
+    <a routerLink="about" routerLinkActive ="active">About</a>
+    <a routerLink="dashboard" routerLinkActive ="active">Dashboard</a>
+  </nav>
+  <!-- <a routerLink="dashboard">Dashboard</a> -->
+  <router-outlet></router-outlet>
+</div>
+<br>
+
+<li>Compserveonents</li>
+<li>Routes and  RouterModule</li>
+<li>RouterOutlet Directive</li>
+<li>Redirects</li>
+<li>Catch all route</li>
+
+
+<p>The Angular Router enables navigation from one view to the next as users perform application tasks
+  First, we need to import the routing modules inside our app.module.ts file.</p>
+  <p>we have to register  different routes with their components. </p>
+  <p>Catch all route
+    add a catch all route by using the path **, if the URL doesn’t match any of the other routes it will match this route.</p>
+
+    <p>The RouterLinkActive directive on each anchor tag helps visually distinguish the anchor for the currently selected "active" route. The router adds the active CSS class to the element when the associated RouterLink becomes active. </p>

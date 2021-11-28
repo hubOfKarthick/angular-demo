@@ -1,0 +1,64 @@
+<div>
+        <!-- binding the signupform to the formGroup directive -->
+  <form [formGroup]='signupForm' (ngSubmit)="PostData(signupForm)">
+      <div class="form-container">
+          <div class="row columns">
+   <div>
+    
+    <input type="text" formControlName='fname' name='fname' id='fname' placeholder="Your First name">
+
+    <div *ngIf="signupForm.controls['fname'].touched && !signupForm.controls['fname'].valid">
+        <span *ngIf="signupForm.controls['fname'].hasError('required') ">
+            First name is required
+            </span>
+            <span *ngIf="signupForm.controls['fname'].hasError('minlength') ">
+             Min length is 3
+            </span>
+            <span *ngIf="signupForm.controls['fname'].hasError('maxlength') ">
+            max length is 15
+        </span>
+    </div>
+
+      
+    </div>
+    <div>
+    <br>
+    <input type="text" formControlName='lname' placeholder="Your Last name">
+
+    <div *ngIf="signupForm.controls['lname'].touched && !signupForm.controls['lname'].valid">
+        <span *ngIf="signupForm.controls['lname'].hasError('required') ">
+            Last name is required
+            </span>
+            <span *ngIf="signupForm.controls['lname'].hasError('minlength') ">
+             Min length is 1
+            </span>
+            <span *ngIf="signupForm.controls['lname'].hasError('maxlength') ">
+            max length is 15
+        </span>
+    </div>
+  </div>
+    <br>
+    <div><input type="text" formControlName='Emailid' placeholder="Your Email id"></div>
+    <div *ngIf="signupForm.controls['Emailid'].touched && !signupForm.controls['Emailid'].valid">
+        <span *ngIf="signupForm.controls['Emailid'].hasError('required') ">
+           Email ID is needed
+             </span>
+          
+      <span *ngIf="signupForm.controls['Emailid'].hasError('email') ">
+           Invalid Email ID
+            </span>
+           
+          
+    </div>
+    <br>
+    <div>
+    <input type="Password" formControlName='userpassword' placeholder="Your password">
+  </div>
+  <br>
+  <div>
+<input type="Submit" value="SignUP" [disabled]='!signupForm.valid' >
+  </div>
+  </div>
+  </div>
+  </form>
+</div>

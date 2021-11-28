@@ -1,0 +1,25 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+{{ title }}
+  </h1>
+</div>
+
+<div class="containert">
+<table>
+  <tr>
+<th>Name</th>
+<th>Age</th>
+<th>Gender</th>
+<th>Name with Title</th>
+ </tr>
+ <tr *ngFor = "let person of people">
+ <td>{{person.name}}</td>
+ <td>{{person.age}}</td>
+ <td>{{person.gender}}</td>
+ <td>{{person.name | customPipe:person.gender}}</td>
+</tr>
+</table>
+</div>
+
+

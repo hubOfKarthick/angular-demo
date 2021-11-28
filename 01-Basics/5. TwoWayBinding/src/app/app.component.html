@@ -1,0 +1,47 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+   {{ title }}
+  </h1>
+</div>
+<ul>
+  <li>
+    Property Binding: This flows data from the component class to html element property.
+  </li>
+  <li>
+       Event binding : This flows data in the opposite direction i.e from the element to component class property.
+  </li>
+  <li>
+<b>Two-way data binding in Angular is a combination of both Property Binding and Event Binding. </b>
+  </li>
+  <li>
+    ngModel directive - import FormsModule in appmodule.
+  </li>
+  <li>
+    The square brackets on the outside are for property binding and The parentheses on the inside are for event binding 
+  </li>
+</ul>
+
+
+<!-- <div>
+  <h3>Property Binding</h3>
+  <label>UserName ::</label>
+<input type="text" [value]="userName"><br/>
+Entered userName is :: {{userName}}
+</div>
+
+<div>
+    <h3>Event Binding with Property Binding</h3>
+    <h4>$event - Is exposed by angular event binding, and contains the event data.</h4>
+   <h4> To retrieve the value from the input element use - $event.target.value.</h4>
+    <label>UserName ::</label>
+    <input type="text" [value]="userName" (input)='userName=$event.target.value'><br/>
+    Entered userName is :: {{userName}}
+</div> -->
+
+<div>
+  <label>userName</label>
+  <input type="text" [(ngModel)]="userName">
+  <br/>
+  Entered UserName is ::{{userName}} 
+</div>

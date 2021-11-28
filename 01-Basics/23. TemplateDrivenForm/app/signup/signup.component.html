@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="form_bg">
+            <form #form="ngForm" (ngSubmit)="registerUser(form)">
+                 <h2 class="text-center">User Registration</h2>
+                <br/>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="First Name" name="firstname" required ngModel #firstname="ngModel"> 
+                    <span class="help-bpx" *ngIf="!firstname.valid">Please enter first name.</span>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control"  placeholder="Last Name" name="lastname" required ngModel>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="email" placeholder="Email" name="email" email required ngModel #email="ngModel">
+                    <span class="help-bpx" *ngIf="email.touched && !email.valid ">Please enter the Valid Email.</span>
+                </div>
+                 <div class="form-group">
+                </div>
+                <br/>
+                <div class="align-center">
+                    <button type="submit" class="btn btn-default" id="register" [disabled]="!form.valid" >Register</button> 
+                </div>           
+            </form>
+            <div class="align-center">       
+                    <button class="btn btn-default" (click)="resetForm(form)">Reset Form</button>
+                </div>
+        </div>
+    </div>
+</div>
+
